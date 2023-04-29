@@ -47,9 +47,4 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
     implementation 'androidx.recyclerview:recyclerview-selection:1.1.0'
-
-    //bikin image view lingkaran
-    implementation 'de.hdodenhof:circleimageview:3.1.0'
-    //implementasi gambar menggunakan glide
-    implementation 'com.github.bumptech.glide:glide:4.15.0'
 }
