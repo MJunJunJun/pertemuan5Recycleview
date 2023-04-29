@@ -1,15 +1,15 @@
 package com.junaedi.pertemuan5recycleview
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.junaedi.pertemuan5recycleview.databinding.MyContactItemBinding
+import com.junaedi.pertemuan5recycleview.databinding.ListviewLayoutBinding
 
-class MyContactAdapter(private val listStudent : ArrayList<MyContact>): RecyclerView.Adapter<MyContactAdapter.ViewHolder>() {
-    class ViewHolder(val binding : MyContactItemBinding) : RecyclerView.ViewHolder(binding.root)
+
+class ListViewAdapter(private val listStudent : ArrayList<MyContact>): RecyclerView.Adapter<ListViewAdapter.ViewHolder>() {
+    class ViewHolder(val binding : ListviewLayoutBinding) : RecyclerView.ViewHolder(binding.root)
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view=MyContactItemBinding.inflate(LayoutInflater.from(parent.context),parent,false)
+        val view=ListviewLayoutBinding.inflate(LayoutInflater.from(parent.context),parent,false)
         return ViewHolder(view)
     }
     override fun getItemCount(): Int {

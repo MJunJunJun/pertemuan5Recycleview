@@ -3,12 +3,11 @@ package com.junaedi.pertemuan5recycleview
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.junaedi.pertemuan5recycleview.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
-    lateinit var adapter: MyContactAdapter
+    lateinit var adapter: ListViewAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding=ActivityMainBinding.inflate(layoutInflater)
@@ -27,7 +26,7 @@ class MainActivity : AppCompatActivity() {
             MyContact("12355","Wal Faidzin","081234567999")
         )
 
-        adapter= MyContactAdapter(listStudent)
+        adapter= ListViewAdapter(listStudent)
         val  layoutManager=LinearLayoutManager(this, LinearLayoutManager.VERTICAL,false)
         binding.rvContact.layoutManager=layoutManager
         binding.rvContact.adapter=adapter
